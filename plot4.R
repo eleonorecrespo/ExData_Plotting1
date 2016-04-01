@@ -32,7 +32,7 @@ with(data_extract,plot(newdate,as.numeric(as.vector(data_extract$Voltage)),type=
 plot(data_extract$newdate,as.numeric(as.vector(data_extract$Sub_metering_1)),col="black",type="l",ylab="Energy Sub Metering",xlab="")
 points(data_extract$newdate,as.numeric(as.vector(data_extract$Sub_metering_2)),col="red",type="l")
 points(data_extract$newdate,as.numeric(as.vector(data_extract$Sub_metering_3)),col="blue",type="l")
-legend("topright",lwd=c(1,1,1),col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright",lwd=c(1,1,1),col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), bty="n")
 # 4
 with(data_extract,plot(newdate,as.numeric(as.vector(data_extract$Global_reactive_power)),type="l",xlab="datetime",ylab="Global_reactive_power"))
 dev.off()
