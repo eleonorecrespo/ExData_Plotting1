@@ -18,7 +18,6 @@ y<-y[-1,]
 library(lubridate)
 y$Date<-dmy(y$Date)
 y$Date<-as.Date(y$Date)
-y$Time<-strptime(c(y$Date,y$Time),"%H:%M:%S")
 
 # Create a subset of table filtered on 2 days 
 data_extract<-subset(y,Date==as.Date("2007-02-01")|Date==as.Date("2007-02-02"))
