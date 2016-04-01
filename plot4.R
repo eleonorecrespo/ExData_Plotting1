@@ -4,14 +4,9 @@ download.file("exdata-data-household_power_consumption.zip",temp)
 
 # Unzip data table
 unzip_table <- unzip("exdata-data-household_power_consumption.zip")
-y<-read.table(unzip_table,sep=";")
+y<-read.table(unzip_table,header= T, sep=";")
 
-# Rename table column names
-cc<-y[1,]
-names(y)<-t(cc)
 
-# Remove 1st row of table
-y<-y[-1,]
 
 # Transform Date and Time columns into universal format with as.Date and strptime
 library(lubridate)
